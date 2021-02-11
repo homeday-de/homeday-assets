@@ -1,0 +1,27 @@
+name: Sync the repo with the Figma library
+
+on: [repository_dispatch]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+    steps:
+      - name: Checkout 🚪
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Set up node env 🏗
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Import the assets from the library 📥
+        run: npm run import-assets
+
+      - name: Sync the repo with libary 🔄
+        run: npm run sync-repo
