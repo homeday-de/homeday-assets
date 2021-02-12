@@ -18,14 +18,16 @@ const SEMANTIC_VERION_TYPE = {
 pushChanges();
 
 async function pushChanges() {
+  console.log('⬆️ Pushing changes...');
   await stageChanges();
   const commitMessage = await getCommitMessage();
 
   if (commitMessage !== null) {
     await commitChanges(commitMessage);
     await pushToMaster();
+    console.log('✅ Pushing changes done!');
   } else {
-    console.log('No changes to push');
+    console.log('🤷 No changes to push');
   }
 }
 
@@ -96,7 +98,7 @@ async function getSemanticVersionType() {
 
 async function getUserName() {
   try {
-    const userName = execPromise('git config user.name');
+    const userName = await execPromise('git config user.name');
 
     return userName;
   } catch {
