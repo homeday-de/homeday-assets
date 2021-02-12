@@ -1,6 +1,8 @@
 name: Sync the repo with the Figma library
 
-on: [repository_dispatch]
+on:
+  repository_dispatch:
+    types: [figma_library_updated]
 
 jobs:
   build:
@@ -20,8 +22,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Install dependencies ⚙️
+        run: npm ci
+
       - name: Import the assets from the library 📥
         run: npm run import-assets
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
 
       - name: Sync the repo with libary 🔄
         run: npm run sync-repo
