@@ -57,6 +57,7 @@ async function getCommitMessage() {
 async function getSemanticVersionType() {
   const changesString = await execPromise('git status --porcelain');
   let changes = changesString.split('\n');
+  console.log('changes', changes);
 
   // It's a major if an asset was deleted, renamed or moved
   const isMajor = changes.some(
