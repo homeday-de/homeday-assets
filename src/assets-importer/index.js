@@ -2,11 +2,11 @@
 require('dotenv').config({ path: '.env.local' });
 const fs = require('fs');
 const fetch = require('node-fetch');
-const camelCase = require('camelCase');
+const camelCase = require('camelcase');
 const CONFIG = require('./CONFIG');
 
 if (require.main == module) {
-  const  firstArgument = process.argv[2];
+  const firstArgument = process.argv[2];
 
   if (firstArgument === undefined) {
     importAllCollections();
@@ -23,7 +23,7 @@ function fetchFromFigma(endpoint) {
     headers: {
       'x-FIGMA-token': process.env.FIGMA_ACCESS_TOKEN,
     },
-  }).then(res => res.json());
+  }).then((res) => res.json());
 }
 
 /**
@@ -41,11 +41,7 @@ function normalizeFilename({ name, regex }) {
  * @param  {string} filename - the file name
  * @param  {string} dist} - the folder where the file will be downloaded
  */
-async function download({
-  url,
-  filename,
-  dist = '',
-}) {
+async function download({ url, filename, dist = '' }) {
   const distPath = `${process.cwd()}${dist}`;
   await fs.mkdir(distPath, { recursive: true }, (err) => {
     if (err) throw err;
@@ -60,7 +56,7 @@ async function download({
       writer.on('finish', resolve(filename));
       writer.on('error', reject);
     });
-  } catch(err) {
+  } catch (err) {
     return Promise.reject(new Error(err));
   }
 }
@@ -80,7 +76,9 @@ async function importAssetsFromFigma({
   matchingRegex,
 }) {
   if (process.env.FIGMA_ACCESS_TOKEN === undefined) {
-    console.error('FIGMA_ACCESS_TOKEN is undefined. Did you add it to your environment variables?');
+    console.error(
+      'FIGMA_ACCESS_TOKEN is undefined. Did you add it to your environment variables?'
+    );
     process.exit(1);
   }
 
@@ -91,19 +89,23 @@ async function importAssetsFromFigma({
     return;
   }
 
-  const filenameMap = file.meta.components
-    .reduce((map, component) => {
-      const isMatch = Array.isArray(component.name.match(matchingRegex));
-      if (isMatch) {
-        const filename = normalizeFilename({ name: component.name, regex: filenameRegex });
-        map[component.node_id] = filename;
-      }
+  const filenameMap = file.meta.components.reduce((map, component) => {
+    const isMatch = Array.isArray(component.name.match(matchingRegex));
+    if (isMatch) {
+      const filename = normalizeFilename({
+        name: component.name,
+        regex: filenameRegex,
+      });
+      map[component.node_id] = filename;
+    }
 
-      return map;
-    }, {});
+    return map;
+  }, {});
 
   const ids = Object.keys(filenameMap).join(',');
-  const assets = await fetchFromFigma(`/images/${fileKey}?ids=${ids}&format=${format}`);
+  const assets = await fetchFromFigma(
+    `/images/${fileKey}?ids=${ids}&format=${format}`
+  );
 
   if (assets.images === undefined) {
     console.warn('No images found for regexp', matchingRegex);
@@ -111,12 +113,15 @@ async function importAssetsFromFigma({
   }
 
   const downloadedFiles = await Promise.all(
-    Object.entries(assets.images)
-      .map(([id, url]) => url && download({
-        url,
-        filename: `${filenameMap[id]}.${format}`,
-        dist,
-      })),
+    Object.entries(assets.images).map(
+      ([id, url]) =>
+        url &&
+        download({
+          url,
+          filename: `${filenameMap[id]}.${format}`,
+          dist,
+        })
+    )
   );
 
   createIndexFile({
@@ -161,22 +166,28 @@ async function importCollection(collection) {
     ...collection,
     fileKey: collection.figmaFileKey,
   });
-  console.log(`✅ Collection "${collection.name}" has been imported successfully!`);
+  console.log(
+    `✅ Collection "${collection.name}" has been imported successfully!`
+  );
 }
 
 function importAllCollections() {
   console.log('Importing all the collections...');
-  CONFIG.COLLECTIONS.forEach(collection => importCollection(collection));
+  CONFIG.COLLECTIONS.forEach((collection) => importCollection(collection));
 }
 
 /**
  * @param  {string} collectionName - the name of the collection to be imported
  */
 function importCollectionByName(collectionName) {
-  const collection = CONFIG.COLLECTIONS.find(({ name }) => name === collectionName);
+  const collection = CONFIG.COLLECTIONS.find(
+    ({ name }) => name === collectionName
+  );
 
   if (collection === undefined) {
-    console.error(`Couldn't find collection "${collectionName}", make sure it's in CONFIG.js`);
+    console.error(
+      `Couldn't find collection "${collectionName}", make sure it's in CONFIG.js`
+    );
     return;
   }
 
