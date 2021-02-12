@@ -37,7 +37,6 @@ function stageChanges() {
 
 async function commitChanges(message) {
   const userName = await getUserName();
-  console.log('userName', userName);
 
   let finalCommitMessage = message;
 
