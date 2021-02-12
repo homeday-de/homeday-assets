@@ -43,9 +43,6 @@ function commitChanges(message) {
 }
 
 async function pushToMaster() {
-  await execPromise(
-    'git remote add origin git@github.com:homeday-de/homeday-assets.git'
-  );
   return execPromise('git push origin master');
 }
 
