@@ -34,6 +34,11 @@ function stageChanges() {
 }
 
 function commitChanges(message) {
+  execPromise(
+    'git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"'
+  );
+  execPromise('git config --local user.name "github-actions[bot]"');
+
   return execPromise(`git commit -m "${message}"`);
 }
 
