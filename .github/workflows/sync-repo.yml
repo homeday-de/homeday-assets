@@ -1,5 +1,5 @@
 # This workflow is triggered when the Figma libarry is published
-# It uses Figma's webhooks for that (so `github.event` contains the same payload of the webhook)
+# It uses Figma's webhooks for that (so `github.event.client_payload` contains the same payload of the webhook)
 # see: https://www.figma.com/developers/api#webhooks-v2-payloads#LIBRARY_PUBLISH
 name: Sync the repo with the Figma library
 
@@ -36,4 +36,4 @@ jobs:
       - name: Sync the repo with libary 🔄
         run: npm run sync-repo
         env:
-          TRIGGERED_BY: ${{ github.event.triggered_by.handle }}
+          TRIGGERED_BY: ${{ github.event.client_payload.triggered_by.handle }}
