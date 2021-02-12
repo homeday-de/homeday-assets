@@ -35,6 +35,8 @@ function stageChanges() {
 
 async function commitChanges(message) {
   const userName = await getUserName();
+  console.log('userName', userName);
+
   let finalCommitMessage = message;
 
   if (!userName) {
@@ -94,13 +96,6 @@ async function getSemanticVersionType() {
 
 async function getUserName() {
   return execPromise('git config user.name');
-}
-
-async function getTriggerer() {
-  const githubUsername = await execPromise('git config user.name');
-  console.log('github user.name', githubUsername);
-  const triggeredBy = process.env.TRIGGERED_BY || githubUsername;
-  return triggeredBy;
 }
 
 function execPromise(command) {
