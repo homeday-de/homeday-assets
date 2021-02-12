@@ -95,7 +95,13 @@ async function getSemanticVersionType() {
 }
 
 async function getUserName() {
-  return execPromise('git config user.name');
+  try {
+    const userName = execPromise('git config user.name');
+
+    return userName;
+  } catch {
+    return null;
+  }
 }
 
 function execPromise(command) {
