@@ -33,13 +33,24 @@ function stageChanges() {
   return execPromise('git add -A');
 }
 
-function commitChanges(message) {
+async function commitChanges(message) {
+  const userName = await getUserName();
+  let finalCommitMessage = message;
+
+  if (!userName) {
+    await setActionBotUser();
+
+    finalCommitMessage = `${finalCommitMessage} | Triggered by: ${process.env.TRIGGERED_BY}`;
+  }
+
+  return execPromise(`git commit -m "${finalCommitMessage}"`);
+}
+
+async function setActionBotUser() {
   execPromise(
     'git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"'
   );
   execPromise('git config --local user.name "github-actions[bot]"');
-
-  return execPromise(`git commit -m "${message}"`);
 }
 
 async function pushToMaster() {
@@ -50,7 +61,7 @@ async function getCommitMessage() {
   const semanticVersionType = await getSemanticVersionType();
 
   return semanticVersionType !== null
-    ? `${semanticVersionType.gitmoji} Sync with the Figma library`
+    ? `${semanticVersionType.gitmoji} Auto-sync with the Figma library`
     : null;
 }
 
@@ -79,6 +90,17 @@ async function getSemanticVersionType() {
   }
 
   return null;
+}
+
+async function getUserName() {
+  return execPromise('git config user.name');
+}
+
+async function getTriggerer() {
+  const githubUsername = await execPromise('git config user.name');
+  console.log('github user.name', githubUsername);
+  const triggeredBy = process.env.TRIGGERED_BY || githubUsername;
+  return triggeredBy;
 }
 
 function execPromise(command) {
