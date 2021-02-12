@@ -2,7 +2,7 @@ name: Sync the repo with the Figma library
 
 on:
   repository_dispatch:
-    types: [figma_library_updated]
+    types: [LIBRARY_PUBLISH]
 
 jobs:
   build:
