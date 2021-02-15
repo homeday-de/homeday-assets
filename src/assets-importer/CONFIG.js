@@ -5,7 +5,7 @@ module.exports = {
       figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
       matchingRegex: new RegExp('Icons/ic_', 'i'),
       filenameRegex: new RegExp('ic_[a-z0-9-]+', 'i'),
-      dist: '/src/assets/small-icons',
+      dist: '/assets/small-icons',
       format: 'svg',
     },
     {
@@ -13,7 +13,7 @@ module.exports = {
       figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
       matchingRegex: new RegExp('Icons M_ic_', 'i'),
       filenameRegex: new RegExp('ic_[a-z0-9-]+', 'i'),
-      dist: '/src/assets/medium-icons',
+      dist: '/assets/medium-icons',
       format: 'svg',
     },
     {
@@ -21,7 +21,7 @@ module.exports = {
       figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
       matchingRegex: new RegExp('Icons XL_ic_', 'i'),
       filenameRegex: new RegExp('ic_[a-z0-9-]+', 'i'),
-      dist: '/src/assets/big-icons',
+      dist: '/assets/big-icons',
       format: 'svg',
     },
     {
@@ -29,7 +29,7 @@ module.exports = {
       figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
       matchingRegex: new RegExp('Slidericon/ic_', 'i'),
       filenameRegex: new RegExp('ic_[a-z0-9-]+', 'i'),
-      dist: '/src/assets/bicolor-icons',
+      dist: '/assets/bicolor-icons',
       format: 'svg',
     },
   ],
