@@ -8,9 +8,10 @@
   },
   "license": "MIT",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "import-assets": "node src/assets-importer",
     "sync-repo": "node src/repo-syncer",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "semantic-release": "semantic-release"
   },
   "author": "ilyasmez",
   "devDependencies": {
