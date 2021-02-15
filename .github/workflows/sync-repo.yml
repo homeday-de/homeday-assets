@@ -9,21 +9,21 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout 🚪
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      - name: Set up node env 🏗
-        uses: actions/setup-node@v2.1.2
+      - name: Read .nvmrc 🔍
+        run: echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"
+        id: nvm
+
+      - name: Set up the right node version 📌
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
 
       - name: Install dependencies ⚙️
         run: npm ci
