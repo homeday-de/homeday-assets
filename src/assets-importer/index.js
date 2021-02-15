@@ -1,18 +1,21 @@
 /* eslint-disable */
 require('dotenv').config({ path: '.env.local' });
-const fs = require('fs');
+const fs = require('fs').promises;
 const fetch = require('node-fetch');
-const camelCase = require('camelcase');
+const { camelCase, kebabCase } = require('tiny-case');
 const CONFIG = require('./CONFIG');
+const { generateMainFile } = require('../main-file-generator');
 
 if (require.main == module) {
   const firstArgument = process.argv[2];
 
-  if (firstArgument === undefined) {
-    importAllCollections();
-  } else {
-    importCollectionByName(firstArgument);
-  }
+  // if (firstArgument === undefined) {
+  //   await importAllCollections();
+  // } else {
+  //   await importCollectionByName(firstArgument);
+  // }
+
+  generateMainFile();
 }
 
 /**
@@ -41,40 +44,32 @@ function normalizeFilename({ name, regex }) {
  * @param  {Object} $0 - the params object
  * @param  {string} $0.url - the url where the icon can be downloaded
  * @param  {string} $0.filename - the file name
- * @param  {string} $0.dist - the folder where the file will be downloaded
+ * @param  {string} $0.dest - the folder where the file will be downloaded
  */
-async function download({ url, filename, dist = '' }) {
-  const distPath = `${process.cwd()}${dist}`;
-  await fs.mkdir(distPath, { recursive: true }, (err) => {
-    if (err) throw err;
-  });
-  const writer = fs.createWriteStream(`${distPath}/${filename}`);
+async function download({ url, filename, dest = '' }) {
+  const destPath = `${process.cwd()}${dest}`;
 
-  try {
-    const response = await fetch(url);
-    response.body.pipe(writer);
+  const response = await fetch(url);
 
-    return new Promise((resolve, reject) => {
-      writer.on('finish', resolve(filename));
-      writer.on('error', reject);
-    });
-  } catch (err) {
-    return Promise.reject(new Error(err));
-  }
+  await fs.mkdir(destPath, { recursive: true });
+
+  await fs.writeFile(`${destPath}/${filename}`, await response.text());
+
+  return filename;
 }
 
 /**
  * @param  {Object} $0 - the params object
  * @param  {string} $0.fileKey - the key to fetch the icons on Figma
  * @param  {string} $0.format - the file format
- * @param  {string} $0.dist - the path where the file will live
+ * @param  {string} $0.dest - the path where the file will live
  * @param  {RegExp} $0.filenameRegex - the regex used to rename the file
  * @param  {RegExp} $0.matchingRegex - the regex used to group the files from Figma
  */
 async function importAssetsFromFigma({
   fileKey,
   format,
-  dist,
+  dest,
   filenameRegex,
   matchingRegex,
 }) {
@@ -122,14 +117,14 @@ async function importAssetsFromFigma({
         download({
           url,
           filename: `${filenameMap[id]}.${format}`,
-          dist,
+          dest,
         })
     )
   );
 
   createIndexFile({
     files: downloadedFiles,
-    dist,
+    dest,
     exportNameRegex: new RegExp(`ic_(.*).${format}`),
     suffix: 'Icon',
   });
@@ -138,11 +133,11 @@ async function importAssetsFromFigma({
 /**
  * @param  {Object} $0 - the params object
  * @param  {object[]} $0.files - the list of files imported from Figma
- * @param  {string} $0.dist - the path where the icon will live
+ * @param  {string} $0.dest - the path where the icon will live
  * @param  {RegExp} $0.exportNameRegex='*' - the regex the file name should match
  * @param  {string} $0.suffix='' - the suffix appended to the icon name
  */
-function createIndexFile({ files, dist, exportNameRegex = '*', suffix = '' }) {
+function createIndexFile({ files, dest, exportNameRegex = '*', suffix = '' }) {
   const fileContent = [...new Set(files)]
     // To have a consistent order and avoid unnecessary line changes, we sort the array
     .sort((a, b) => b.localeCompare(a)) // Ascending
@@ -156,9 +151,7 @@ function createIndexFile({ files, dist, exportNameRegex = '*', suffix = '' }) {
       return `export { default as ${exportName} } from './${file}';\n${content}`;
     }, '');
 
-  fs.writeFile(`${process.cwd()}${dist}/index.js`, fileContent, (err) => {
-    if (err) console.error('Failed to create index', err);
-  });
+  fs.writeFile(`${process.cwd()}${dest}/index.js`, fileContent);
 }
 
 /**
@@ -168,6 +161,7 @@ async function importCollection(collection) {
   console.log(`📦 Importing collection "${collection.name}"...`);
   await importAssetsFromFigma({
     ...collection,
+    dest: `${CONFIG.DEST}/${kebabCase(collection.name)}`,
     fileKey: collection.figmaFileKey,
   });
   console.log(
@@ -175,15 +169,17 @@ async function importCollection(collection) {
   );
 }
 
-function importAllCollections() {
+async function importAllCollections() {
   console.log('Importing all the collections...');
-  CONFIG.COLLECTIONS.forEach((collection) => importCollection(collection));
+  await Promise.all(
+    CONFIG.COLLECTIONS.map((collection) => importCollection(collection))
+  );
 }
 
 /**
  * @param  {string} collectionName - the name of the collection to be imported
  */
-function importCollectionByName(collectionName) {
+async function importCollectionByName(collectionName) {
   const collection = CONFIG.COLLECTIONS.find(
     ({ name }) => name === collectionName
   );
@@ -195,5 +191,5 @@ function importCollectionByName(collectionName) {
     return;
   }
 
-  importCollection(collection);
+  await importCollection(collection);
 }
