@@ -13,6 +13,9 @@
     "sync-repo": "node src/repo-syncer",
     "semantic-release": "semantic-release"
   },
+  "files": [
+    "assets/*"
+  ],
   "author": "ilyasmez",
   "devDependencies": {
     "camelcase": "^6.2.0",

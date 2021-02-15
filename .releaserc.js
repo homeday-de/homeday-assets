@@ -63,11 +63,6 @@ module.exports = {
       },
     ],
     '@semantic-release/github',
-    [
-      '@semantic-release/npm',
-      {
-        pkgRoot: 'assets',
-      },
-    ],
+    '@semantic-release/npm',
   ],
 };
