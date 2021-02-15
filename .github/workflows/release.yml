@@ -1,0 +1,34 @@
+# This workflow takes care of releasing a new version of the package and publishing it to NPM
+# when a new releasable change is pushed to master (the releasability is detected using the commits' Gitmojis)
+# To learn more about the releasability of the change see: https://github.com/carloscuesta/gitmoji/pull/692
+name: Release and publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout🚪
+        uses: actions/checkout@v2
+
+      - name: Read .nvmrc 🔍
+        run: echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"
+        id: nvm
+
+      - name: Set up the right node version 📌
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+
+      - name: Install dependencies ⚙️
+        run: npm ci
+
+      - name: Release and publish 📤
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: npm run semantic-release

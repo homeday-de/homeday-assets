@@ -1,19 +1,25 @@
 {
   "name": "homeday-assets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0-development",
+  "description": "A collection of Homeday's icons and illustrations, meant to be used inside Homeday's products.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/homeday-de/homeday-assets.git"
+  },
+  "license": "MIT",
   "scripts": {
     "import-assets": "node src/assets-importer",
     "sync-repo": "node src/repo-syncer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ilyasmez",
-  "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "camelcase": "^6.2.0",
     "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.1"
-  }
+    "gitmojis": "^3.2.0",
+    "node-fetch": "^2.6.1",
+    "semantic-release": "^17.3.9",
+    "semantic-release-gitmoji": "^1.3.4"
+  },
+  "dependencies": {}
 }
