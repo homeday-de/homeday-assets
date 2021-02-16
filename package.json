@@ -20,7 +20,6 @@
     "camelcase": "^6.2.0",
     "dotenv": "^8.2.0",
     "gitmojis": "^3.2.0",
-    "glob": "^7.1.6",
     "node-fetch": "^2.6.1",
     "recursive-copy": "^2.0.11",
     "semantic-release": "^17.3.9",
