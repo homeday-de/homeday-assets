@@ -2,21 +2,21 @@
 require('dotenv').config({ path: '.env.local' });
 const fs = require('fs').promises;
 const fetch = require('node-fetch');
-const { camelCase, kebabCase } = require('tiny-case');
+const camelCase = require('camelcase');
+const PROJECT_CONFIG = require('../CONFIG');
 const CONFIG = require('./CONFIG');
-const { generateMainFile } = require('../main-file-generator');
 
-if (require.main == module) {
-  const firstArgument = process.argv[2];
+(async () => {
+  if (require.main == module) {
+    const firstArgument = process.argv[2];
 
-  // if (firstArgument === undefined) {
-  //   await importAllCollections();
-  // } else {
-  //   await importCollectionByName(firstArgument);
-  // }
-
-  generateMainFile();
-}
+    if (firstArgument === undefined) {
+      await importAllCollections();
+    } else {
+      await importCollectionByName(firstArgument);
+    }
+  }
+})();
 
 /**
  * @param  {string} endpoint - the figma endpoint
@@ -125,7 +125,6 @@ async function importAssetsFromFigma({
   createIndexFile({
     files: downloadedFiles,
     dest,
-    exportNameRegex: new RegExp(`ic_(.*).${format}`),
     suffix: 'Icon',
   });
 }
@@ -134,20 +133,16 @@ async function importAssetsFromFigma({
  * @param  {Object} $0 - the params object
  * @param  {object[]} $0.files - the list of files imported from Figma
  * @param  {string} $0.dest - the path where the icon will live
- * @param  {RegExp} $0.exportNameRegex='*' - the regex the file name should match
  * @param  {string} $0.suffix='' - the suffix appended to the icon name
  */
-function createIndexFile({ files, dest, exportNameRegex = '*', suffix = '' }) {
+function createIndexFile({ files, dest, suffix = '' }) {
   const fileContent = [...new Set(files)]
     // To have a consistent order and avoid unnecessary line changes, we sort the array
     .sort((a, b) => b.localeCompare(a)) // Ascending
     .reduce((content, file) => {
-      const nameMatches = file.match(exportNameRegex);
-      if (!nameMatches) {
-        return content;
-      }
+      const fileName = file.split('.')[0];
+      const exportName = camelCase(fileName) + suffix;
 
-      const exportName = camelCase(nameMatches.pop()) + suffix;
       return `export { default as ${exportName} } from './${file}';\n${content}`;
     }, '');
 
@@ -161,9 +156,14 @@ async function importCollection(collection) {
   console.log(`📦 Importing collection "${collection.name}"...`);
   await importAssetsFromFigma({
     ...collection,
-    dest: `${CONFIG.DEST}/${kebabCase(collection.name)}`,
+    dest: `/${PROJECT_CONFIG.ASSETS_DIR}/${collection.dir}`,
     fileKey: collection.figmaFileKey,
   });
+
+  if (collection.isDefault) {
+    updateMainIndexFile(collection);
+  }
+
   console.log(
     `✅ Collection "${collection.name}" has been imported successfully!`
   );
@@ -192,4 +192,16 @@ async function importCollectionByName(collectionName) {
   }
 
   await importCollection(collection);
+}
+
+async function updateMainIndexFile({ dir }) {
+  const destAbsolutePath = `${process.cwd()}/${PROJECT_CONFIG.ASSETS_DIR}`;
+  const originalIndexPath = `${destAbsolutePath}/${dir}/index.js`;
+  const originalContent = await fs.readFile(originalIndexPath, 'utf8');
+  const newContent = originalContent.replace(
+    new RegExp("from './"),
+    `from './${dir}/`
+  );
+
+  return fs.writeFile(`${destAbsolutePath}/index.js`, newContent);
 }

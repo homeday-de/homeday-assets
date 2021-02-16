@@ -19,7 +19,7 @@ A collection is a set of assets that share the same configuration.
 
 ### Configuration
 
-In the CONFIG.js file you can add/remove/edit your collections inside `COLLECTIONS` _(Array)_ or change the destination directory `DEST` _(String)_.
+In the CONFIG.js file you can add/remove/edit your collections inside `COLLECTIONS` _(Array)_.
 
 Each collection should contain the following properties:
 

@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies ⚙️
         run: npm ci
 
+      - name: Building the project 📦
+        run: npm run build
+
       - name: Release and publish 📤
         env:
           NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}

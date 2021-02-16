@@ -3,6 +3,7 @@ const dateFormat = require('dateformat');
 const { readFileSync } = require('fs');
 const { join } = require('path');
 const { gitmojis } = require('gitmojis');
+const PROJECT_CONFIG = require('./src/CONFIG');
 
 const TEMPLATE_DIR = './.semantic-release/templates';
 
@@ -63,6 +64,11 @@ module.exports = {
       },
     ],
     '@semantic-release/github',
-    '@semantic-release/npm',
+    [
+      '@semantic-release/npm',
+      {
+        pkgRoot: PROJECT_CONFIG.DIST_DIR,
+      },
+    ],
   ],
 };
