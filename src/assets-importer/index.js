@@ -125,7 +125,6 @@ async function importAssetsFromFigma({
   createIndexFile({
     files: downloadedFiles,
     dest,
-    suffix: 'Icon',
   });
 }
 
@@ -133,15 +132,14 @@ async function importAssetsFromFigma({
  * @param  {Object} $0 - the params object
  * @param  {object[]} $0.files - the list of files imported from Figma
  * @param  {string} $0.dest - the path where the icon will live
- * @param  {string} $0.suffix='' - the suffix appended to the icon name
  */
-function createIndexFile({ files, dest, suffix = '' }) {
+function createIndexFile({ files, dest }) {
   const fileContent = [...new Set(files)]
     // To have a consistent order and avoid unnecessary line changes, we sort the array
     .sort((a, b) => b.localeCompare(a)) // Ascending
     .reduce((content, file) => {
       const fileName = file.split('.')[0];
-      const exportName = camelCase(fileName) + suffix;
+      const exportName = camelCase(fileName);
 
       return `export { default as ${exportName} } from './${file}';\n${content}`;
     }, '');
