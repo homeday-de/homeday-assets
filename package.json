@@ -1,7 +1,7 @@
 {
   "name": "homeday-assets",
   "version": "0.0.0-development",
-  "description": "A collection of Homeday's icons and illustrations, meant to be used inside Homeday's products.",
+  "description": "A library of Homeday's icons and illustrations, meant to be used inside Homeday's products.",
   "main": "./assets/index.js",
   "repository": {
     "type": "git",
