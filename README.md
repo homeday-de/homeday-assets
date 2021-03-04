@@ -17,7 +17,7 @@ This project is owned by @ilyasmez, Homeday's frontend (with the support of the 
 
 The package can be installed from NPM:
 
-```
+```sh
 npm i homeday-assets
 ```
 
@@ -25,7 +25,7 @@ npm i homeday-assets
 
 The package contains different kinds of assets, and they are grouped under subdirectories:
 
-```
+```js
 import { mail } from 'homeday-assets/S';
 import { yinYang } from 'homeday-assets/M';
 import { yinYang as yinYangLarge } from 'homeday-assets/L';
@@ -33,7 +33,7 @@ import { yinYang as yinYangLarge } from 'homeday-assets/L';
 
 The `S` collection (icons) is the default, so it can be used just as:
 
-```
+```js
 import { mail } from 'homeday-assets';
 ```
 
@@ -45,20 +45,20 @@ import { mail } from 'homeday-assets';
 
 2. Clone the repo:
 
-```
+```sh
 git clone https://github.com/YOUR-USERNAME/homeday-assets
 ```
 
 3. Make sure that you're using a supported node version (v14.x.x), if you use NVM, run:
 
-```
+```sh
 nvm install
 nvm use
 ```
 
 4. Install the dependencies:
 
-```
+```sh
 npm i
 ```
 
@@ -73,7 +73,7 @@ If you're not part of Homeday's organization, please create an issue.
 2. Add an entry in the assets-importer's config file.
 3. Run the import script:
 
-```
+```sh
 npm run import-assets
 ```
 
@@ -91,7 +91,7 @@ Detects if the changes made are patch (an asset has been modified), minor (new a
 
 The module can be invoked with:
 
-```
+```sh
 npm run sync-repo
 ```
 
@@ -104,7 +104,7 @@ The build can be found in the `dist` directory.
 
 The module can be invoked with:
 
-```
+```sh
 npm run build
 ```
 
