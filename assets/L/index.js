@@ -18,6 +18,7 @@ export { default as bellReminder } from './bell-reminder.svg';
 export { default as calendar } from './calendar.svg';
 export { default as checkCircle } from './check-circle.svg';
 export { default as checklistClipboard } from './checklist-clipboard.svg';
+export { default as coffee } from './coffee.svg';
 export { default as crossCircle } from './cross-circle.svg';
 export { default as documentComments } from './document-comments.svg';
 export { default as documentKey } from './document-key.svg';
