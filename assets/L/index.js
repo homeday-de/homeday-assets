@@ -84,6 +84,8 @@ export { default as reportWarning } from './report-warning.svg';
 export { default as rocket } from './rocket.svg';
 export { default as roofRepair } from './roof-repair.svg';
 export { default as signPenDoc } from './sign-pen-doc.svg';
+export { default as thumbsDownDislikeDb80 } from './thumbs-down-dislike-db80.svg';
+export { default as thumbsUpLikeDb80 } from './thumbs-up-like-db80.svg';
 export { default as timer1 } from './timer-1.svg';
 export { default as timer2 } from './timer-2.svg';
 export { default as timer3 } from './timer-3.svg';

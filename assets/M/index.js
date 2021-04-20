@@ -119,6 +119,8 @@ export { default as sellDate } from './sell-date.svg';
 export { default as signPenDoc } from './sign-pen-doc.svg';
 export { default as solarSimplified } from './solar-simplified.svg';
 export { default as terraceSimplified } from './terrace-simplified.svg';
+export { default as thumbsDownDislike } from './thumbs-down-dislike.svg';
+export { default as thumbsUpLike } from './thumbs-up-like.svg';
 export { default as timer1 } from './timer-1.svg';
 export { default as timer2 } from './timer-2.svg';
 export { default as timer3 } from './timer-3.svg';
