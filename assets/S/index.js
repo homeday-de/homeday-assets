@@ -43,6 +43,7 @@ export { default as facebook } from './facebook.svg';
 export { default as fanOff } from './fan-off.svg';
 export { default as favoriteBorder } from './favorite-border.svg';
 export { default as feedback } from './feedback.svg';
+export { default as filter } from './filter.svg';
 export { default as folder } from './folder.svg';
 export { default as fullscreenExit } from './fullscreen-exit.svg';
 export { default as fullscreen } from './fullscreen.svg';
