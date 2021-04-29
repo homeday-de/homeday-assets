@@ -132,6 +132,7 @@ export { default as videoconferenceRealtorCallApp } from './videoconference-real
 export { default as walletEuro } from './wallet-euro.svg';
 export { default as wallsRenovation } from './walls-renovation.svg';
 export { default as warningTriangle } from './warning-triangle.svg';
+export { default as weatherSunCloud } from './weather-sun-cloud.svg';
 export { default as window } from './window.svg';
 export { default as womanHouseProperty } from './woman-house-property.svg';
 export { default as womanJobSuitcase } from './woman-job-suitcase.svg';
