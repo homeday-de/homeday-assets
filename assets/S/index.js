@@ -42,6 +42,7 @@ export { default as event } from './event.svg';
 export { default as facebook } from './facebook.svg';
 export { default as fanOff } from './fan-off.svg';
 export { default as favoriteBorder } from './favorite-border.svg';
+export { default as favoriteFilled } from './favorite-filled.svg';
 export { default as feedback } from './feedback.svg';
 export { default as filter } from './filter.svg';
 export { default as folder } from './folder.svg';
