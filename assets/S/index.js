@@ -78,6 +78,7 @@ export { default as next } from './next.svg';
 export { default as notes } from './notes.svg';
 export { default as offer } from './offer.svg';
 export { default as openInNew } from './open-in-new.svg';
+export { default as phoneHungUp } from './phone-hung-up.svg';
 export { default as phone } from './phone.svg';
 export { default as photoCollection } from './photo-collection.svg';
 export { default as plot } from './plot.svg';
