@@ -21,6 +21,7 @@ export { default as cal1To3Months } from './cal-1-to-3-months.svg';
 export { default as cal10To5Months } from './cal-10-to-5-months.svg';
 export { default as cal12Months } from './cal-12-months.svg';
 export { default as cal4To6Months } from './cal-4-to-6-months.svg';
+export { default as cal4To9Months } from './cal-4-to-9-months.svg';
 export { default as cal6Months } from './cal-6-months.svg';
 export { default as calMoreThan15Months } from './cal-more-than-15-months.svg';
 export { default as calMoreThan6Months } from './cal-more-than-6-months.svg';
