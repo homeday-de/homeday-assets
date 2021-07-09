@@ -103,6 +103,7 @@ export { default as sort } from './sort.svg';
 export { default as starBorder } from './star-border.svg';
 export { default as starFilled } from './star-filled.svg';
 export { default as starHalfFilled } from './star-half-filled.svg';
+export { default as stop } from './stop.svg';
 export { default as sunny24Px } from './sunny-24px.svg';
 export { default as tasks } from './tasks.svg';
 export { default as thumbUp } from './thumb-up.svg';
