@@ -45,7 +45,6 @@ export { default as documentTiff } from './document-tiff.svg';
 export { default as documentTxt } from './document-txt.svg';
 export { default as documentXls } from './document-xls.svg';
 export { default as documentXlsx } from './document-xlsx.svg';
-export { default as documentXml } from './document-xml.svg';
 export { default as documentZip } from './document-zip.svg';
 export { default as documentsBasic } from './documents-basic.svg';
 export { default as documentsHandover } from './documents-handover.svg';
