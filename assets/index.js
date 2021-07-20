@@ -58,6 +58,7 @@ export { default as homedayLogo } from './S/homeday-logo.svg';
 export { default as houseNumber } from './S/house-number.svg';
 export { default as house } from './S/house.svg';
 export { default as info } from './S/info.svg';
+export { default as key24Px } from './S/key-24px.svg';
 export { default as layer } from './S/layer.svg';
 export { default as lightOff } from './S/light-off.svg';
 export { default as linkedIn } from './S/linkedIn.svg';
