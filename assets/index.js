@@ -34,6 +34,7 @@ export { default as dashboard } from './S/dashboard.svg';
 export { default as delete } from './S/delete.svg';
 export { default as directions } from './S/directions.svg';
 export { default as document } from './S/document.svg';
+export { default as doubleChevron } from './S/double-chevron.svg';
 export { default as doubleQuoteEnd } from './S/double-quote-end.svg';
 export { default as doubleQuoteStart } from './S/double-quote-start.svg';
 export { default as download } from './S/download.svg';
