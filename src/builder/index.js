@@ -26,6 +26,7 @@ async function copyPackageJson() {
   // We adjust the main/entry file to match the new structure
   const newPackageJson = {
     ...packageJson,
+    main: './index.js',
     module: './index.js',
   };
 
