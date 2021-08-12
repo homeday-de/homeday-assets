@@ -83,6 +83,7 @@ export { default as noteAlt } from './S/note-alt.svg';
 export { default as notes } from './S/notes.svg';
 export { default as notificationsPaused } from './S/notifications-paused.svg';
 export { default as offer } from './S/offer.svg';
+export { default as offline } from './S/offline.svg';
 export { default as openInNew } from './S/open-in-new.svg';
 export { default as ownerOccupier } from './S/owner-occupier.svg';
 export { default as phoneHungUp } from './S/phone-hung-up.svg';
