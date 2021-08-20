@@ -33,5 +33,21 @@ module.exports = {
       filenameRegex: new RegExp('ic_([a-z0-9-]+)', 'i'),
       format: 'svg',
     },
+    {
+      name: 'Medium illustrations in PNG format',
+      dir: 'M-png',
+      figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
+      matchingRegex: new RegExp('Icons M_ic_', 'i'),
+      filenameRegex: new RegExp('ic_([a-z0-9-]+)', 'i'),
+      format: 'png',
+    },
+    {
+      name: 'Large illustrations in PNG format',
+      dir: 'L-png',
+      figmaFileKey: 'KdznSjw9btqHEKdgmm2UT4co',
+      matchingRegex: new RegExp('Icons L_ic_', 'i'),
+      filenameRegex: new RegExp('ic_([a-z0-9-]+)', 'i'),
+      format: 'png',
+    },
   ],
 };

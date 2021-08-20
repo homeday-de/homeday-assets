@@ -1,7 +1,8 @@
 /* eslint-disable */
 require('dotenv').config({ path: '.env.local' });
+const { createWriteStream } = require('fs');
 const fs = require('fs').promises;
-const fetch = require('node-fetch');
+const axios = require('axios');
 const camelCase = require('camelcase');
 const PROJECT_CONFIG = require('../CONFIG');
 const CONFIG = require('./CONFIG');
@@ -21,12 +22,14 @@ const CONFIG = require('./CONFIG');
 /**
  * @param  {string} endpoint - the figma endpoint
  */
-function fetchFromFigma(endpoint) {
-  return fetch(`https://api.figma.com/v1${endpoint}`, {
+async function fetchFromFigma(endpoint) {
+  const response = await axios.get(`https://api.figma.com/v1${endpoint}`, {
     headers: {
       'x-FIGMA-token': process.env.FIGMA_ACCESS_TOKEN,
     },
-  }).then((res) => res.json());
+  });
+
+  return response.data;
 }
 
 /**
@@ -47,15 +50,20 @@ function normalizeFilename({ name, regex }) {
  * @param  {string} $0.dest - the folder where the file will be downloaded
  */
 async function download({ url, filename, dest = '' }) {
+  if (!url) {
+    return;
+  }
+
+  const response = await axios({ url, responseType: 'stream' });
   const destPath = `${process.cwd()}${dest}`;
-
-  const response = await fetch(url);
-
   await fs.mkdir(destPath, { recursive: true });
 
-  await fs.writeFile(`${destPath}/${filename}`, await response.text());
-
-  return filename;
+  return new Promise(async (resolve, reject) => {
+    response.data
+      .pipe(createWriteStream(`${destPath}/${filename}`))
+      .on('finish', () => resolve(filename))
+      .on('error', () => resolve(undefined));
+  });
 }
 
 /**
@@ -110,17 +118,21 @@ async function importAssetsFromFigma({
     return;
   }
 
-  const downloadedFiles = await Promise.all(
-    Object.entries(assets.images).map(
-      ([id, url]) =>
-        url &&
-        download({
-          url,
-          filename: `${filenameMap[id]}.${format}`,
-          dest,
-        })
+  const downloadedFiles = (
+    await Promise.all(
+      Object.entries(assets.images).map(async ([id, url]) => {
+        try {
+          return await download({
+            url,
+            filename: `${filenameMap[id]}.${format}`,
+            dest,
+          });
+        } catch (e) {
+          console.error(`Failed to download ${url}`, e);
+        }
+      })
     )
-  );
+  ).filter((filename) => filename !== undefined);
 
   createIndexFile({
     files: downloadedFiles,
