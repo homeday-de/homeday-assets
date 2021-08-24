@@ -12,10 +12,14 @@ export { default as bungalowHouseSimplified } from './bungalow-house-simplified.
 export { default as bungalowHouse } from './bungalow-house.svg';
 export { default as business } from './business.svg';
 export { default as cal1To3Months } from './cal-1-to-3-months.svg';
+export { default as cal1To3Years } from './cal-1-to-3-years.svg';
+export { default as cal1015Years } from './cal-10-15-years.svg';
 export { default as cal12Months } from './cal-12-months.svg';
 export { default as cal2Years } from './cal-2-years.svg';
 export { default as cal4To6Months } from './cal-4-to-6-months.svg';
+export { default as cal4To9Years } from './cal-4-to-9-years.svg';
 export { default as cal6Months } from './cal-6-months.svg';
+export { default as calMoreThan15Years } from './cal-more-than-15-years.svg';
 export { default as calMoreThan6Months } from './cal-more-than-6-months.svg';
 export { default as cellar } from './cellar.svg';
 export { default as chimney } from './chimney.svg';

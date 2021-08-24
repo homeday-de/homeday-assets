@@ -93,6 +93,7 @@ export { default as propertyMagnifier } from './property-magnifier.png';
 export { default as propertyMarketing } from './property-marketing.png';
 export { default as questionAnswer } from './question-answer.png';
 export { default as reportWarning } from './report-warning.png';
+export { default as rocket } from './rocket.png';
 export { default as roofRepair } from './roof-repair.png';
 export { default as signPenDoc } from './sign-pen-doc.png';
 export { default as thumbsDownDislikeDb80 } from './thumbs-down-dislike-db80.png';
