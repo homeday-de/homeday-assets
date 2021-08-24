@@ -13,7 +13,7 @@ export { default as bungalowHouse } from './bungalow-house.svg';
 export { default as business } from './business.svg';
 export { default as cal1To3Months } from './cal-1-to-3-months.svg';
 export { default as cal1To3Years } from './cal-1-to-3-years.svg';
-export { default as cal1015Years } from './cal-10-15-years.svg';
+export { default as cal10To15Years } from './cal-10-to-15-years.svg';
 export { default as cal12Months } from './cal-12-months.svg';
 export { default as cal2Years } from './cal-2-years.svg';
 export { default as cal4To6Months } from './cal-4-to-6-months.svg';
