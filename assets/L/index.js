@@ -107,6 +107,7 @@ export { default as timer } from './timer.svg';
 export { default as twoPeopleHouseNegotiation } from './two-people-house-negotiation.svg';
 export { default as videoFilmCamera } from './video-film-camera.svg';
 export { default as videoconferenceRealtorCallApp } from './videoconference-realtor-call-app.svg';
+export { default as viewings } from './viewings.svg';
 export { default as walletEuro } from './wallet-euro.svg';
 export { default as wallsRenovation } from './walls-renovation.svg';
 export { default as warningTriangle } from './warning-triangle.svg';

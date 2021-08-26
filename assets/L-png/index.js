@@ -107,6 +107,7 @@ export { default as timer } from './timer.png';
 export { default as twoPeopleHouseNegotiation } from './two-people-house-negotiation.png';
 export { default as videoFilmCamera } from './video-film-camera.png';
 export { default as videoconferenceRealtorCallApp } from './videoconference-realtor-call-app.png';
+export { default as viewings } from './viewings.png';
 export { default as walletEuro } from './wallet-euro.png';
 export { default as wallsRenovation } from './walls-renovation.png';
 export { default as warningTriangle } from './warning-triangle.png';
