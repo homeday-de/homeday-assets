@@ -107,6 +107,7 @@ export { default as shop } from './shop.svg';
 export { default as smallArrow } from './small-arrow.svg';
 export { default as smartphone } from './smartphone.svg';
 export { default as sort } from './sort.svg';
+export { default as speed } from './speed.svg';
 export { default as starBorder } from './star-border.svg';
 export { default as starFilled } from './star-filled.svg';
 export { default as starHalfFilled } from './star-half-filled.svg';
