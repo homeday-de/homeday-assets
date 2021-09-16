@@ -117,6 +117,7 @@ export { default as padlockUnlock } from './padlock-unlock.svg';
 export { default as parkingLot } from './parking-lot.svg';
 export { default as phoneCall } from './phone-call.svg';
 export { default as pictures } from './pictures.svg';
+export { default as piggyBank } from './piggy-bank.svg';
 export { default as plot } from './plot.svg';
 export { default as propertyMagnifier } from './property-magnifier.svg';
 export { default as propertyMarketing } from './property-marketing.svg';

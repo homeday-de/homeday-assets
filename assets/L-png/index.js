@@ -89,6 +89,7 @@ export { default as padlockUnlock } from './padlock-unlock.png';
 export { default as parkingLot } from './parking-lot.png';
 export { default as phoneCall } from './phone-call.png';
 export { default as pictures } from './pictures.png';
+export { default as piggyBank } from './piggy-bank.png';
 export { default as propertyMagnifier } from './property-magnifier.png';
 export { default as propertyMarketing } from './property-marketing.png';
 export { default as questionAnswer } from './question-answer.png';
