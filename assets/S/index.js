@@ -79,6 +79,7 @@ export { default as messenger } from './messenger.svg';
 export { default as minus } from './minus.svg';
 export { default as myLocation } from './my-location.svg';
 export { default as next } from './next.svg';
+export { default as noKey24Px } from './no-key-24px.svg';
 export { default as noteAlt } from './note-alt.svg';
 export { default as notes } from './notes.svg';
 export { default as notificationsPaused } from './notifications-paused.svg';
