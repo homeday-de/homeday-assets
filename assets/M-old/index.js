@@ -45,7 +45,6 @@ export { default as garden } from './garden.svg';
 export { default as houseAmountFloors } from './house-amount-floors.svg';
 export { default as houseAndMoney } from './house-and-money.svg';
 export { default as houseFamily } from './house-family.svg';
-export { default as houseMiddleRowSimplified } from './house-middle-row-simplified.svg';
 export { default as houseMiddleRow } from './house-middle-row.svg';
 export { default as houseMoneyCalendar } from './house-money-calendar.svg';
 export { default as houseMultiFamily } from './house-multi-family.svg';
