@@ -62,9 +62,9 @@ nvm use
 npm i
 ```
 
-### Add/Change/Remove assets from an existing group
+### Add/Update/Remove assets from an existing group
 
-The project is self-sustainable, which means that it updates itself when a new version of our Figma library is published. So if you commit is about adding/changing/removing an asset, please contact the design team to add the asset to the Figma library, it will be added to this repo automatically afterwords.
+The project is self-sustainable, which means that it updates itself when a new version of our Figma library is published. So if your change is about adding/updating/removing an asset, please contact the design team to make that change in the Figma library, it will be added to this repo automatically afterwards.
 If you're not part of Homeday's organization, please create an issue.
 
 ### Add a new asset group
