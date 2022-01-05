@@ -82,6 +82,7 @@ export { default as next } from './next.svg';
 export { default as noKey24Px } from './no-key-24px.svg';
 export { default as noteAlt } from './note-alt.svg';
 export { default as notes } from './notes.svg';
+export { default as notificationsActive } from './notifications-active.svg';
 export { default as notificationsPaused } from './notifications-paused.svg';
 export { default as offer } from './offer.svg';
 export { default as offline } from './offline.svg';
