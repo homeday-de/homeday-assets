@@ -86,6 +86,7 @@ export { default as notificationsPaused } from './S/notifications-paused.svg';
 export { default as offer } from './S/offer.svg';
 export { default as offline } from './S/offline.svg';
 export { default as openInNew } from './S/open-in-new.svg';
+export { default as outogingCall } from './S/outoging-call.svg';
 export { default as ownerOccupier } from './S/owner-occupier.svg';
 export { default as phoneHungUp } from './S/phone-hung-up.svg';
 export { default as phone } from './S/phone.svg';
