@@ -97,6 +97,7 @@ export { default as plusCircle } from './S/plus-circle.svg';
 export { default as plus } from './S/plus.svg';
 export { default as postpone } from './S/postpone.svg';
 export { default as print } from './S/print.svg';
+export { default as progress } from './S/progress.svg';
 export { default as questionAnswer } from './S/question-answer.svg';
 export { default as recentActors } from './S/recent-actors.svg';
 export { default as refresh } from './S/refresh.svg';
