@@ -97,7 +97,6 @@ export { default as offline } from './S/offline.svg';
 export { default as openInNew } from './S/open-in-new.svg';
 export { default as outgoingCall } from './S/outgoing-call.svg';
 export { default as ownerOccupier } from './S/owner-occupier.svg';
-export { default as parkingSpace } from './S/parking-space.svg';
 export { default as parking } from './S/parking.svg';
 export { default as phoneHungUp } from './S/phone-hung-up.svg';
 export { default as phone } from './S/phone.svg';
