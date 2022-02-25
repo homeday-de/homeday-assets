@@ -104,6 +104,7 @@ export { default as person } from './S/person.svg';
 export { default as phoneHungUp } from './S/phone-hung-up.svg';
 export { default as phone } from './S/phone.svg';
 export { default as photoCollection } from './S/photo-collection.svg';
+export { default as piggybank } from './S/piggybank.svg';
 export { default as playground } from './S/playground.svg';
 export { default as plot } from './S/plot.svg';
 export { default as plusCircle } from './S/plus-circle.svg';
