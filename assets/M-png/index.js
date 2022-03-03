@@ -122,6 +122,7 @@ export { default as plot } from './plot.png';
 export { default as propertyMagnifier } from './property-magnifier.png';
 export { default as propertyMarketing } from './property-marketing.png';
 export { default as propertyPhotography } from './property-photography.png';
+export { default as propertyVideo } from './property-video.png';
 export { default as purposeSellHouse } from './purpose-sell-house.png';
 export { default as quality1 } from './quality-1.png';
 export { default as quality2 } from './quality-2.png';

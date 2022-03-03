@@ -122,6 +122,7 @@ export { default as plot } from './plot.svg';
 export { default as propertyMagnifier } from './property-magnifier.svg';
 export { default as propertyMarketing } from './property-marketing.svg';
 export { default as propertyPhotography } from './property-photography.svg';
+export { default as propertyVideo } from './property-video.svg';
 export { default as purposeSellHouse } from './purpose-sell-house.svg';
 export { default as quality1 } from './quality-1.svg';
 export { default as quality2 } from './quality-2.svg';
