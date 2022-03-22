@@ -16,6 +16,11 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+      - name: Setup git config
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
       - name: Read .nvmrc 🔍
         run: echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"
         id: nvm
