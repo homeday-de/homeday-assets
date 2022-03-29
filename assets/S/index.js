@@ -5,6 +5,7 @@ export { default as addProperty } from './add-property.svg';
 export { default as alarmSystem } from './alarm-system.svg';
 export { default as all } from './all.svg';
 export { default as apartment } from './apartment.svg';
+export { default as arrowBack } from './arrow-back.svg';
 export { default as arrow } from './arrow.svg';
 export { default as assignment } from './assignment.svg';
 export { default as balcony } from './balcony.svg';
