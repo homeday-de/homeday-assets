@@ -113,6 +113,7 @@ export { default as outgoingCall } from './outgoing-call.svg';
 export { default as ownerOccupier } from './owner-occupier.svg';
 export { default as pantry } from './pantry.svg';
 export { default as parkingSpace } from './parking-space.svg';
+export { default as partyRoom } from './party-room.svg';
 export { default as phoneHungUp } from './phone-hung-up.svg';
 export { default as phone } from './phone.svg';
 export { default as photoCollection } from './photo-collection.svg';
