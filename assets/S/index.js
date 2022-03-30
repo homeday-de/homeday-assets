@@ -26,7 +26,7 @@ export { default as callback } from './callback.svg';
 export { default as camera } from './camera.svg';
 export { default as capitalInvestment } from './capital-investment.svg';
 export { default as carpark } from './carpark.svg';
-export { default as carpot } from './carpot.svg';
+export { default as carport } from './carport.svg';
 export { default as chartEye } from './chart-eye.svg';
 export { default as chart } from './chart.svg';
 export { default as checkCircle } from './check-circle.svg';
