@@ -157,6 +157,7 @@ export { default as starHalfFilled } from './S/star-half-filled.svg';
 export { default as stop } from './S/stop.svg';
 export { default as sunny24Px } from './S/sunny-24px.svg';
 export { default as support } from './S/support.svg';
+export { default as surveillanceCamera } from './S/surveillance-camera.svg';
 export { default as swapAccount } from './S/swap-account.svg';
 export { default as tasks } from './S/tasks.svg';
 export { default as terrace } from './S/terrace.svg';
