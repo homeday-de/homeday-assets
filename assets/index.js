@@ -6,6 +6,8 @@ export { default as alarmSystem } from './S/alarm-system.svg';
 export { default as all } from './S/all.svg';
 export { default as apartment } from './S/apartment.svg';
 export { default as arrowBack } from './S/arrow-back.svg';
+export { default as arrowDown } from './S/arrow-down.svg';
+export { default as arrowUp } from './S/arrow-up.svg';
 export { default as arrow } from './S/arrow.svg';
 export { default as assignment } from './S/assignment.svg';
 export { default as balcony } from './S/balcony.svg';
