@@ -78,6 +78,7 @@ export { default as grid } from './grid.svg';
 export { default as group } from './group.svg';
 export { default as guestToilet } from './guest-toilet.svg';
 export { default as heaterOff } from './heater-off.svg';
+export { default as helpCenter } from './help-center.svg';
 export { default as homedayLogo } from './homeday-logo.svg';
 export { default as houseNumber } from './house-number.svg';
 export { default as house } from './house.svg';
