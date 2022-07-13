@@ -1,4 +1,6 @@
 [![](https://img.shields.io/badge/owner-Multiple-blue)](#owners)
+[![Release and publish](https://github.com/homeday-de/homeday-assets/actions/workflows/release.yml/badge.svg)](https://github.com/homeday-de/homeday-assets/actions/workflows/release.yml)
+[![Sync the repo with the Figma library](https://github.com/homeday-de/homeday-assets/actions/workflows/sync-repo.yml/badge.svg)](https://github.com/homeday-de/homeday-assets/actions/workflows/sync-repo.yml)
 
 # Homeday Assets
 
