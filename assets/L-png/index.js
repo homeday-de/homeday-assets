@@ -19,6 +19,7 @@ export { default as calendar } from './calendar.png';
 export { default as checkCircle } from './check-circle.png';
 export { default as checklistClipboard } from './checklist-clipboard.png';
 export { default as coffee } from './coffee.png';
+export { default as cookieCello } from './cookie-cello.png';
 export { default as crossCircle } from './cross-circle.png';
 export { default as documentBlank } from './document-blank.png';
 export { default as documentComments } from './document-comments.png';

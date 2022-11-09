@@ -19,6 +19,7 @@ export { default as calendar } from './calendar.svg';
 export { default as checkCircle } from './check-circle.svg';
 export { default as checklistClipboard } from './checklist-clipboard.svg';
 export { default as coffee } from './coffee.svg';
+export { default as cookieCello } from './cookie-cello.svg';
 export { default as crossCircle } from './cross-circle.svg';
 export { default as documentBlank } from './document-blank.svg';
 export { default as documentComments } from './document-comments.svg';
