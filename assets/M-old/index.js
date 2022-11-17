@@ -66,6 +66,7 @@ export { default as plotArea } from './plot-area.svg';
 export { default as plot } from './plot.svg';
 export { default as purposeBuyHouseSimplified } from './purpose-buy-house-simplified.svg';
 export { default as purposeBuyHouse } from './purpose-buy-house.svg';
+export { default as purposeCuriosity } from './purpose-curiosity.svg';
 export { default as purposeSellHouse } from './purpose-sell-house.svg';
 export { default as quality1 } from './quality-1.svg';
 export { default as quality2 } from './quality-2.svg';
