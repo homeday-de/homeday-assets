@@ -56,6 +56,7 @@ export { default as duplex } from './duplex.svg';
 export { default as edit } from './edit.svg';
 export { default as ekb } from './ekb.svg';
 export { default as elevator } from './elevator.svg';
+export { default as equals } from './equals.svg';
 export { default as error } from './error.svg';
 export { default as euroSymbol } from './euro-symbol.svg';
 export { default as event } from './event.svg';
