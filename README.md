@@ -7,7 +7,9 @@
 A library of Homeday's icons and illustrations.
 The project is automatically updated when a new version of our Figma library is published.
 
-The available assets can be found under [the assets directory](https://github.com/homeday-de/homeday-assets/tree/master/assets)
+The available assets can be found under [the assets directory](https://github.com/homeday-de/homeday-assets/tree/master/assets).
+
+Icons are clustered in a Figma file based on their sizes as follows: [Large](https://www.figma.com/file/KdznSjw9btqHEKdgmm2UT4co/Design-System-UI-Patterns?node-id=2325%3A0&t=hfCElixEX1OYrQnu-0), [Medium](https://www.figma.com/file/KdznSjw9btqHEKdgmm2UT4co/Design-System-UI-Patterns?node-id=5148%3A5623&t=hfCElixEX1OYrQnu-0), [Medium-old](https://www.figma.com/file/KdznSjw9btqHEKdgmm2UT4co/Design-System-UI-Patterns?node-id=2913%3A1736&t=hfCElixEX1OYrQnu-0), [Small](https://www.figma.com/file/KdznSjw9btqHEKdgmm2UT4co/Design-System-UI-Patterns?node-id=8%3A53&t=hfCElixEX1OYrQnu-0)
 
 ### Owners
 
