@@ -84,6 +84,7 @@ export { default as homedayLogo } from './homeday-logo.svg';
 export { default as houseNumber } from './house-number.svg';
 export { default as house } from './house.svg';
 export { default as info } from './info.svg';
+export { default as kebabMenu } from './kebab-menu.svg';
 export { default as key24Px } from './key-24px.svg';
 export { default as kitchenIsland } from './kitchen-island.svg';
 export { default as laundryRoom } from './laundry-room.svg';
