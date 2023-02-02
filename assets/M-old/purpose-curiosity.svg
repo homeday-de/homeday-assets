@@ -6,5 +6,5 @@
 <path d="M57.9985 71C57.9985 71 66.9796 65.687 63.0628 50.9994M28.9999 71C28.9999 71 14.8902 63.8088 26.7354 41.0006C32.658 29.5964 37.5055 29 42.401 29C43.2413 29 44.109 29.0176 44.9999 29.1044" stroke="#1C3553" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M51.999 43.0005H40.999V39.0005C39.8886 40.2009 36.9063 43.0005 33.999 43.0005" stroke="#1C3553" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M63 25.4343V32.9995H73V25.4343L68 20.9995L63 25.4343Z" stroke="#2988FF" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<circle r="15" transform="matrix(1 0 0 -1 68 27.9995)" stroke="#2988FF" stroke-width="3.3"/>
+<circle cx="15" cy="15" r="15" transform="matrix(1 0 0 -1 53 42.9995)" stroke="#2988FF" stroke-width="3.3"/>
 </svg>
