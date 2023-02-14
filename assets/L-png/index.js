@@ -15,6 +15,7 @@ export { default as balcony } from './balcony.png';
 export { default as basementCellar } from './basement-cellar.png';
 export { default as bathroom } from './bathroom.png';
 export { default as bellReminder } from './bell-reminder.png';
+export { default as boilder } from './boilder.png';
 export { default as calendar } from './calendar.png';
 export { default as checkCircle } from './check-circle.png';
 export { default as checklistClipboard } from './checklist-clipboard.png';
