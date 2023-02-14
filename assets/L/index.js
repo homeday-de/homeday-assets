@@ -15,7 +15,7 @@ export { default as balcony } from './balcony.svg';
 export { default as basementCellar } from './basement-cellar.svg';
 export { default as bathroom } from './bathroom.svg';
 export { default as bellReminder } from './bell-reminder.svg';
-export { default as boilder } from './boilder.svg';
+export { default as boiler } from './boiler.svg';
 export { default as calendar } from './calendar.svg';
 export { default as checkCircle } from './check-circle.svg';
 export { default as checklistClipboard } from './checklist-clipboard.svg';
