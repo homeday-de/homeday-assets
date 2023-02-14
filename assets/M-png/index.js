@@ -65,6 +65,7 @@ export { default as flatTypeMaisonette } from './flat-type-maisonette.png';
 export { default as flatTypeSouterrain } from './flat-type-souterrain.png';
 export { default as flat } from './flat.png';
 export { default as floorStairs } from './floor-stairs.png';
+export { default as floor } from './floor.png';
 export { default as floorsRenovation } from './floors-renovation.png';
 export { default as football } from './football.png';
 export { default as garage } from './garage.png';

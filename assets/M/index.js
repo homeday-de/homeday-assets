@@ -65,6 +65,7 @@ export { default as flatTypeMaisonette } from './flat-type-maisonette.svg';
 export { default as flatTypeSouterrain } from './flat-type-souterrain.svg';
 export { default as flat } from './flat.svg';
 export { default as floorStairs } from './floor-stairs.svg';
+export { default as floor } from './floor.svg';
 export { default as floorsRenovation } from './floors-renovation.svg';
 export { default as football } from './football.svg';
 export { default as garage } from './garage.svg';
