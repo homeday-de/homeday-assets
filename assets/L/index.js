@@ -47,6 +47,7 @@ export { default as expose } from './expose.svg';
 export { default as facadeRepair } from './facade-repair.svg';
 export { default as family } from './family.svg';
 export { default as floorStairs } from './floor-stairs.svg';
+export { default as floor } from './floor.svg';
 export { default as floorsRenovation } from './floors-renovation.svg';
 export { default as footballCello } from './football-cello.svg';
 export { default as garden } from './garden.svg';

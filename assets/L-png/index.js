@@ -47,6 +47,7 @@ export { default as expose } from './expose.png';
 export { default as facadeRepair } from './facade-repair.png';
 export { default as family } from './family.png';
 export { default as floorStairs } from './floor-stairs.png';
+export { default as floor } from './floor.png';
 export { default as floorsRenovation } from './floors-renovation.png';
 export { default as footballCello } from './football-cello.png';
 export { default as garden } from './garden.png';
