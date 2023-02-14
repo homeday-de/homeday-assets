@@ -17,6 +17,7 @@ export { default as balcony } from './balcony.svg';
 export { default as basementCellar } from './basement-cellar.svg';
 export { default as bathroom } from './bathroom.svg';
 export { default as bellReminder } from './bell-reminder.svg';
+export { default as boiler } from './boiler.svg';
 export { default as cal1To3Months } from './cal-1-to-3-months.svg';
 export { default as cal10To5Months } from './cal-10-to-5-months.svg';
 export { default as cal12Months } from './cal-12-months.svg';

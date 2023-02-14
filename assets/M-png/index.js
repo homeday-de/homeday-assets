@@ -17,6 +17,7 @@ export { default as balcony } from './balcony.png';
 export { default as basementCellar } from './basement-cellar.png';
 export { default as bathroom } from './bathroom.png';
 export { default as bellReminder } from './bell-reminder.png';
+export { default as boiler } from './boiler.png';
 export { default as cal1To3Months } from './cal-1-to-3-months.png';
 export { default as cal10To5Months } from './cal-10-to-5-months.png';
 export { default as cal12Months } from './cal-12-months.png';
