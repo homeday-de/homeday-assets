@@ -47,6 +47,7 @@ export { default as copyFile } from './copy-file.svg';
 export { default as dashboard } from './dashboard.svg';
 export { default as delete } from './delete.svg';
 export { default as directions } from './directions.svg';
+export { default as divided } from './divided.svg';
 export { default as document } from './document.svg';
 export { default as doubleChevron } from './double-chevron.svg';
 export { default as doubleQuoteEnd } from './double-quote-end.svg';

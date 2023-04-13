@@ -21,6 +21,7 @@ export { default as cal1To3Months } from './cal-1-to-3-months.svg';
 export { default as cal4To6Months } from './cal-4-to-6-months.svg';
 export { default as calMoreThan6Months } from './cal-more-than-6-months.svg';
 export { default as calendar } from './calendar.svg';
+export { default as camera } from './camera.svg';
 export { default as checkCircle } from './check-circle.svg';
 export { default as checklistClipboard } from './checklist-clipboard.svg';
 export { default as chimney } from './chimney.svg';
