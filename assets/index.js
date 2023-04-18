@@ -32,6 +32,7 @@ export { default as carpark } from './S/carpark.svg';
 export { default as carport } from './S/carport.svg';
 export { default as chartEye } from './S/chart-eye.svg';
 export { default as chart } from './S/chart.svg';
+export { default as checkCircleOutline } from './S/check-circle-outline.svg';
 export { default as checkCircle } from './S/check-circle.svg';
 export { default as check } from './S/check.svg';
 export { default as chevron } from './S/chevron.svg';
