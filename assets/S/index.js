@@ -25,6 +25,7 @@ export { default as brandedAppliances } from './branded-appliances.svg';
 export { default as buildings } from './buildings.svg';
 export { default as builtInKitchen } from './built-in-kitchen.svg';
 export { default as buy } from './buy.svg';
+export { default as calculator } from './calculator.svg';
 export { default as callback } from './callback.svg';
 export { default as camera } from './camera.svg';
 export { default as capitalInvestment } from './capital-investment.svg';
