@@ -1,7 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="1.50772" y1="11.6276" x2="11.9112" y2="3.3048" stroke="#1C3553" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="1.25" y1="-1.25" x2="14.5729" y2="-1.25" transform="matrix(-0.780869 -0.624695 -0.624695 0.780869 22.6875 13.3845)" stroke="#1C3553" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="4.9502" y1="9.75" x2="4.9502" y2="21.25" stroke="#1C3553" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="19.0806" y1="9.75" x2="19.0806" y2="21.25" stroke="#1C3553" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="4.9375" y1="21.25" x2="18.9375" y2="21.25" stroke="#1C3553" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M19.28 18.2V8.75998L12.74 5.25998C12.25 4.91998 11.55 4.91998 11.11 5.22998L4.53 8.75998V18.2H2V19.2H21.8V18.2H19.27H19.28ZM5.53 9.35998L11.64 6.07998C11.78 5.97998 12.03 5.97998 12.22 6.10998L18.28 9.35998V18.21H5.53V9.35998Z" fill="#002341"/>
+<path d="M6.63 16.45H11.48V10.5H6.63V16.45ZM7.63 11.5H10.48V15.45H7.63V11.5Z" fill="#002341"/>
+<path d="M12.32 16.45H17.17V10.5H12.32V16.45ZM13.32 11.5H16.17V15.45H13.32V11.5Z" fill="#002341"/>
 </svg>
